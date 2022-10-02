@@ -1,0 +1,76 @@
+<!-- <?php 
+
+include "connect.php";
+
+$query = "SELECT * FROM `image`";
+
+$sql = mysqli_query($con, $query);
+
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                 <div class="card-header bg-info">
+                    <h4>PHP IMAGE - READ</h4>
+                 </div>
+                 <div class="card-body">
+                    <div class="table">
+                        <thead>
+                            <tr>
+                               <th>id</th>
+                               <th>name</th>
+                               <th>class</th> 
+                               <th>phonenum</th> 
+                               <th>image</th> 
+                               <th>edit</th> 
+                            </tr>
+                            <tbody>
+                            <?php
+
+                              if (mysqli_num_rows($sql)> 0) {
+
+                                 while ($row=mysqli_fetch_assoc($sql)) {
+
+                             ?>
+
+                             <tr>
+
+                                 <td><?php echo $row['id']; ?></td>
+
+                                 <td><?php echo $row['name']; ?></td>
+    
+                                 <td><?php echo $row['class']; ?></td>
+
+                                 <td><?php echo $row['phonenum']; ?></td>
+
+                                 <td><a class="btn btn-info" href="add.php?id=<?php echo $row['id']; ?>">Edit</a>&nbsp;<a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
+
+                             </tr>                       
+
+                  <?php   }
+
+                     }
+                   ?>
+
+                            </tbody>
+                        </thead>
+                     </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
